@@ -1,0 +1,78 @@
+    <section className="py-6 bg-categoryBgColor border-y border-borderColor">
+    <Container>
+     <Flex className="items-center">
+      {/* Catagory Left Bar part start */}
+      <div className="w-1/4">
+        <Flex className="items-center gap-2 pl-8">
+        <div onClick={() => {
+                  handleClick(dropRef, btnRef);
+                }}
+
+           ref={btnRef}><Bars className="cursor-pointer"/>
+           </div>
+           <div ref={dropRef} className="bg-primaryColor w-64 text-sm font-dm absolute top-20 left-40 hidden z-50">  
+             <ul className='text-catagoryMenuText'>
+                <List href="#" text="Accesories" className="border-b border-catagoryMenuBorder block py-4 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
+                <List href="#" text="Furniture" className="border-b border-catagoryMenuBorder block py-4 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
+                <List href="#" text="Electronics" className="border-b border-catagoryMenuBorder block py-4 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
+                <List href="#" text="Clothes" className="border-b border-catagoryMenuBorder block py-4 pl-5  hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
+                <List href="#" text="Bags" className="border-b border-catagoryMenuBorder block py-4 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
+                <List href="#" text="Home appliances" className="border-b border-catagoryMenuBorder block py-5 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
+              </ul>
+            </div>
+          <a href="#"><Paragraph text="Shop by Category" className="text-green-500 text-sm"/></a>
+        </Flex>
+      </div>
+      {/* Catagory Left Bar part end */}
+      {/* Searchbox part start */}
+      <Flex className="items-center text-center justify-end">
+      <div className="w-1/2 ">
+          <input type="text" className="w-[600px] py-3 px-5 outline-transparent placeholder:text-red-700 placeholder:text-sm placeholder:font-dm placeholder:font-normal rounded-lg" placeholder="Search Products"/>
+      </div>
+      <a href="#"><FcSearch className="ml-[170px]"/></a>
+      </Flex>
+      {/* Searchbox part end */}
+       {/* Catagory right-side Icon part start */}
+      <div className="w-1/4">
+        <Flex className="items-center pl-[150px]">
+                  <div  onClick={() => {
+                    handleClick(dropRefOne, btnRefOne);
+                  }}
+                  ref={btnRefOne}><FaUser className="cursor-pointer" />
+                  </div>
+                  <a href="#"><FaCaretDown className="cursor-pointer" /></a>
+                  <div ref={dropRefOne} className="bg-white w-48 text-primaryColor text-sm font-dm text-center absolute top-20 right-52 hidden z-50">
+                               
+                  <ul className='text-black'>
+                  <CustomLink to="/login" text="Login" className="border border-solid border-borderTwo block py-4 hover:bg-userHoverBg hover:text-white  hover:font-bold cursor-pointer duration-500"/>
+   
+                  <CustomLink to="/signup" text="Sign up" className="border border-solid border-borderTwo block py-4 hover:bg-userHoverBg hover:text-white hover:font-bold  cursor-pointer duration-500"/>
+
+                  </ul>
+                  </div>
+                  <div onClick={() => {
+                    handleClick(dropRefTwo, btnRefTwo);
+                  }}
+                  ref={btnRefTwo}><FaShoppingCart className='ml-5 cursor-pointer'/> </div>
+                                          <div ref={dropRefTwo} className="bg-white w-[360px]  border border-solid border-borderTwo absolute top-20 right-36 hidden z-50">
+                               <a href="#"><Image  src={CartPopup} alt="CartPopup.png" className="w-full relative "/></a>
+                               <a href="#"><FaTimes className='absolute top-14 right-5'/></a>
+                               <Flex className='gap-x-1 py-3.5 pl-5'>
+                               <Paragraph text="Subtotal:" className='text-secondaryColor text-base'/>
+                               <Price text="$44.00" className="text-primaryColor text-base font-dm font-bold "/>
+                               </Flex>
+                              <Flex className='px-5 justify-between pb-5'>
+                                <Button text="View Cart" className="bg-white py-4 px-10 border border-solid border-userHoverBg text-primaryColor text-sm font-dm font-bold hover:bg-primaryColor hover:text-white"/>
+                                <Button text="Checkout" className="bg-white py-4 px-10 border border-solid border-userHoverBg text-primaryColor text-sm font-dm font-bold hover:bg-primaryColor hover:text-white"/>
+                              </Flex>
+                               
+                               
+                            
+                        </div>
+        </Flex>
+         
+      </div>
+      {/* Catagory right-side Icon part end */}
+     </Flex>
+    </Container>
+    </section>
