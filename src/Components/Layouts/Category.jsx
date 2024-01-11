@@ -10,7 +10,7 @@ import CartPopup from '../../assets/CartPopup.png'
 import Price from '../Price'
 import Image from '../Image'
 import Button from '../Button'
-import CustomLink from '../CustomLink'
+import { Link } from 'react-router-dom'
 const Category = () => {
   const dropRef = useRef(null);
   const btnRef = useRef(null);
@@ -72,16 +72,16 @@ const Category = () => {
                   handleClick(dropRef, btnRef);
                 }}
 
-           ref={btnRef}><Bars className="cursor-pointer"/>
+           ref={btnRef}><Link><Bars className="cursor-pointer"/></Link>
            </div>
            <div ref={dropRef} className="bg-gray-600 w-44 text-sm font-dm absolute top-[150px] left-10 hidden z-50">  
              <ul>
-                <List href="#" text="Accesories" className="border-b border-yellow-400 block py-2 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
-                <List href="#" text="Furniture" className="border-b border-yellow-400 block py-2 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
-                <List href="#" text="Electronics" className="border-b border-yellow-400 block py-2 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
-                <List href="#" text="Clothes" className="border-b border-yellow-400 block py-2 pl-5  hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
-                <List href="#" text="Bags" className="border-b border-yellow-400 block py-2 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
-                <List href="#" text="Home appliances" className="border-b border-yellow-400 block py-2 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
+                <List to="#" text="Accesories" className="border-b border-yellow-400 block py-2 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
+                <List to="#" text="Furniture" className="border-b border-yellow-400 block py-2 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
+                <List to="#" text="Electronics" className="border-b border-yellow-400 block py-2 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
+                <List to="#" text="Clothes" className="border-b border-yellow-400 block py-2 pl-5  hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
+                <List to="#" text="Bags" className="border-b border-yellow-400 block py-2 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
+                <List to="#" text="Home appliances" className="border-b border-yellow-400 block py-2 pl-5 hover:text-white hover:pl-8 hover:font-bold cursor-pointer duration-500"/>
               </ul>
             </div>
           <a href="#"><Paragraph text="Shop by Category" className="text-green-500 text-sm"/></a>
@@ -93,7 +93,7 @@ const Category = () => {
       <div className="w-1/2 ">
           <input type="text" className="w-[600px] py-3 px-5 outline-transparent placeholder:text-red-700 placeholder:text-sm placeholder:font-dm placeholder:font-normal rounded-lg" placeholder="Search Products"/>
       </div>
-      <a href="#"><FcSearch className="ml-[170px]"/></a>
+      <Link to="#"><FcSearch className="ml-[170px]"/></Link>
       </Flex>
       {/* Searchbox part end */}
        {/* Catagory right-side Icon part start */}
@@ -103,24 +103,24 @@ const Category = () => {
                   <div  onClick={() => {
                     handleClick(dropRefOne, btnRefOne);
                   }}
-                  ref={btnRefOne}><a href="#" className='flex' ><FaUser className="cursor-pointer" /><FaCaretDown className=" cursor-pointer" /></a>
+                  ref={btnRefOne}><Link to="#" className='flex' ><FaUser className="cursor-pointer" /><FaCaretDown className=" cursor-pointer" /></Link>
                   </div>
                   
                   <div ref={dropRefOne} className="bg-teal-200 rounded-md w-48 text-sm font-dm text-center absolute top-[150px] right-16 hidden z-50">
                                
                   <ul>
-                  <CustomLink to="/login" text="Login" className="border rounded-md border-solid border-yellow-400 block px-[77px] py-3 hover:bg-orange-400 text-red-600 hover:text-blue-600  hover:font-bold cursor-pointer duration-500"/>
+                  <List to="/login" text="Login" className="border rounded-md border-solid border-yellow-400 block px-[77px] py-3 hover:bg-orange-400 text-red-600 hover:text-blue-600  hover:font-bold cursor-pointer duration-500"/>
    
-                  <CustomLink to="/signup" text="Sign up" className="border rounded-md border-solid border-yellow-400 block px-[69px] py-3 hover:bg-orange-400 text-red-600 hover:text-blue-600  hover:font-bold cursor-pointer duration-500"/>
+                  <List to="/signup" text="Sign up" className="border rounded-md border-solid border-yellow-400 block px-[69px] py-3 hover:bg-orange-400 text-red-600 hover:text-blue-600  hover:font-bold cursor-pointer duration-500"/>
                   </ul>
                   </div>
                   <div onClick={() => {
                     handleClick(dropRefTwo, btnRefTwo);
                   }}
-                  ref={btnRefTwo}><FaShoppingCart className='ml-5 cursor-pointer'/> </div>
+                  ref={btnRefTwo}><FaShoppingCart className='ml-5 cursor-pointer'/></div>
                   <div ref={dropRefTwo} className="bg-teal-600 w-[250px] rounded-md border border-solid border-yellow-400 absolute top-36 right-[28px] hidden z-50">
-                  <a href="#"><Image  src={CartPopup} alt="CartPopup.png" className="w-[330px] rounded-md relative "/></a>
-                  <a href="#"><FaTimes className='absolute top-6 right-5'/></a>
+                  <Link to="#"><Image  src={CartPopup} alt="CartPopup.png" className="w-[330px] rounded-md relative "/></Link>
+                  <Link to="#"><FaTimes className='absolute top-6 right-5'/></Link>
                   <Flex className='gap-x-1 py-3.5 pl-5'>
                   <Paragraph text="Subtotal:" className='text-red-300 text-base'/>
                   <Price text="$44.00" className="text-yellow-300 text-base font-dm font-bold "/>

@@ -6,12 +6,12 @@ import Price from "./Price"
 import Badge from "./Badge"
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import { FaArrowsRotate } from "react-icons/fa6";
-
+import { Link } from "react-router-dom"
 const Products = ({imageUrl,alt,title,price,tag,href}) => {
   return (
     <div className= "w-[370px]  group">
        <div className="relative overflow-hidden"> 
-        <a href={href}><Image src={imageUrl} alt={alt} className="w-[300px]"/></a>
+        <Link to={href}><Image src={imageUrl} alt={alt} className="w-[300px]"/></Link>
         <Badge text={tag} className='absolute top-[20px] left-[26px] py-2 px-7'/>
         <div className='w-[300px] bg-green-400  py-6 group-hover:bottom-0 duration-500 absolute left-0 -bottom-[160px]'>
             <div>

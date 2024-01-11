@@ -1,7 +1,6 @@
 import Container from "../Container"
 import Heading from "../Heading"
 import Flex from "../Flex"
-import Product from "../Products"
 import Clock from '../../assets/clock.png'
 import Watch from '../../assets/watch.png'
 import Basket from '../../assets/basket.png'

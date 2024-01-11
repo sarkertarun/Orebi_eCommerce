@@ -6,10 +6,11 @@ import Flex from '../Flex'
 import Paragraph from '../Paragraph';
 import { MdLocalShipping } from "react-icons/md";
 import { FaArrowRotateLeft } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 const Banner = () => {
   return (
     <section>
-      <a href="#"><Image src={BannerImg} className="bg-cover bg-no-repeat bg-center"/></a>
+      <Link to="#"><Image src={BannerImg} className="bg-cover bg-no-repeat bg-center"/></Link>
       <div className="py-6 bg-categoryBgColor border-y border-red-600">
       <Container>
         <Flex>

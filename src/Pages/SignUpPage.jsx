@@ -28,8 +28,7 @@ const SignUpPage = () => {
     
   return (
     <>
-    <Header />
-    <Category />
+
     <Container>
         <Heading  text="Sign up" as="h3" className="text-5xl font-bold font-dm text-orange-500 ml-5 pt-32"/>
         <Paragraph text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the." className="text-green-600 text-base font-dm font-normal pt-[100px] pr-[630px] border-b border-yellow-600 ml-5 pb-16"/>
@@ -130,7 +129,7 @@ const SignUpPage = () => {
         
     </Container>
     
-        <Footer />
+       
     </>
   )
 }

@@ -8,6 +8,7 @@ import Logo from "../../assets/logo.png"
 import { FaInstagramSquare } from "react-icons/fa";
 import { BsFacebook } from "react-icons/bs";
 import { IoLogoLinkedin } from "react-icons/io5";
+import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <section className='bg-categoryBgColor py-[60px]'>
@@ -18,31 +19,31 @@ const Footer = () => {
                         <div>
                             <Heading text="#M#ENU" className="text-blue-500 text-base font-dm font-bold pb-[17px]" as="h4"/>
                             <ul>
-                            <List href="#" text="Home" className="pb-[6px]"/>
-                            <List href="#" text="Shop" className="pb-[6px]"/>
-                            <List href="#" text="About" className="pb-[6px] text-red-700"/>
-                            <List href="#" text="Contact" className="pb-[6px]"/>
-                            <List href="#" text="Journal" className=""/>
+                            <List to="#" text="Home" className="pb-[6px]"/>
+                            <List to="#" text="Shop" className="pb-[6px]"/>
+                            <List to="#" text="About" className="pb-[6px] text-red-700"/>
+                            <List to="#" text="Contact" className="pb-[6px]"/>
+                            <List to="#" text="Journal" className=""/>
                             </ul>
                         </div>
                         <div>
                             <Heading text="SH#O#P" className="text-blue-500 text-base font-dm font-bold pb-[17px]" as="h4"/>
                             <ul>
-                            <List href="#" text="Category 1" className="pb-[6px]" />
-                            <List href="#" text="Category 2" className="pb-[6px]"/>
-                            <List href="#" text="Category 3" className="pb-[6px] text-red-700"/>
-                            <List href="#" text="Category 4" className="pb-[6px]"/>
-                            <List href="#" text="Category 5" className=""/>
+                            <List to="#" text="Category 1" className="pb-[6px]" />
+                            <List to="#" text="Category 2" className="pb-[6px]"/>
+                            <List to="#" text="Category 3" className="pb-[6px] text-red-700"/>
+                            <List to="#" text="Category 4" className="pb-[6px]"/>
+                            <List to="#" text="Category 5" className=""/>
                             </ul>
                         </div>
                         <div>
                             <Heading text="H#E#LP" className="text-blue-500 text-base font-dm font-bold pb-[17px]" as="h4"/>
                             <ul>
-                            <List href="#" text="Privacy Policy" className="pb-[6px]" />
-                            <List href="#" text="Terms & Conditions" className="pb-[6px]"/>
-                            <List href="#" text="Special E-shop" className="pb-[6px] text-red-700"/>
-                            <List href="#" text="Shipping" className=" pb-[6px]"/>
-                            <List href="#" text="Secure Payments" className=""/>
+                            <List to="#" text="Privacy Policy" className="pb-[6px]" />
+                            <List to="#" text="Terms & Conditions" className="pb-[6px]"/>
+                            <List to="#" text="Special E-shop" className="pb-[6px] text-red-700"/>
+                            <List to="#" text="Shipping" className=" pb-[6px]"/>
+                            <List to="#" text="Secure Payments" className=""/>
                             </ul>
                         </div>
                         <div className='w-[264px]'>
@@ -59,9 +60,9 @@ const Footer = () => {
             <Flex className="justify-between pt-[65px]">
                 <div>
                  <Flex className="items-center gap-4 text-xl ml-2">
-                    <a href="#"><BsFacebook /></a>
-                    <a href="#"><IoLogoLinkedin /></a>
-                    <a href="#"><FaInstagramSquare /></a>
+                    <Link to="#"><BsFacebook /></Link>
+                    <Link to="#"><IoLogoLinkedin /></Link>
+                    <Link to="#"><FaInstagramSquare /></Link>
                  </Flex>
                 </div>
                 <div>

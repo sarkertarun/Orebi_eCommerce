@@ -1,8 +1,6 @@
-import Header from '../Components/Layouts/Header'
-import Category from '../Components/Layouts/Category'
+
 import Container from '../Components/Container'
 import Heading from '../Components/Heading'
-import Footer from '../Components/Layouts/Footer'
 import Button from '../Components/Button'
 import Flex from '../Components/Flex'
 import Image from '../Components/Image'
@@ -13,8 +11,7 @@ import Paragraph from '../Components/Paragraph'
 const AboutPage = () => {
   return (
     <>
-    <Header />
-    <Category />
+
     <Container>
         <Heading  text="About" as="h3" className="text-5xl font-bold font-dm text-green-600 pl-4 py-20"/>
         <Flex className='justify-evenly'>
@@ -47,7 +44,7 @@ const AboutPage = () => {
         </Flex>
      
         </Container>
-        <Footer />
+      
     </>
   )
 }

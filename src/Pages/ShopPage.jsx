@@ -22,9 +22,8 @@ import Clock from "../assets/clock.png"
 import Watch from "../assets/watch.png"
 import Basket from "../assets/basket.png"
 import Toy from "../assets/toy.png"
-import Header from "../Components/Layouts/Header"
-import Category from "../Components/Layouts/Category"
-import Footer from "../Components/Layouts/Footer"
+import { Link } from 'react-router-dom'
+
 
 const ShopPage = () => {
   let categoryRef = useRef(0);
@@ -74,19 +73,19 @@ const ShopPage = () => {
   };
   return (
     <>
-    <Header />
-    <Category />
+
     <Container>
     <Heading  text="Products" as="h3" className="text-5xl font-bold font-dm text-red-800 ml-5 pt-32"/>
       <Flex className="pt-[137px] pb-[300px]">
        <div>
        <div className='w-[372px] relative'>
           <Flex className="items-center justify-between">
-          <Paragraph text="Shop by Category" className="text-orange-600 ml-5 text-lg font-dm font-bold"/>
-          <FaCaretDown onClick={handleCategory}/>
+          <Paragraph text="Shop by Category" className="text-blue-600 ml-5 text-lg font-dm font-bold"/>
+          <Link to="#"><FaCaretDown onClick={handleCategory}/></Link>
           </Flex>
           <div ref={categoryRef} className='absolute  w-full ml-5 top-8 left-0 hidden pl-2'>
             <ul>
+
               <List text="Category 1" className="text-red-800 text-base font-dm font-normal pt-4 pb-2 inline-block"/>
               <List text="Category 2" className="text-red-800 text-base font-dm font-normal py-2 inline-block"/>
               <List text="Category 3" className="text-red-800 text-base font-dm font-normal py-2 inline-block"/>
@@ -98,7 +97,7 @@ const ShopPage = () => {
         <div className='w-[372px] relative pt-[250px]'>
           <Flex className="items-center justify-between">
           <Paragraph text="Shop by Color" className="text-blue-600 ml-5 text-lg font-dm font-bold"/>
-          <FaCaretDown onClick={handleColor}/>
+          <Link to="#"><FaCaretDown onClick={handleColor}/></Link>
           </Flex>
           <div ref={colorRef} className='absolute  w-full ml-5 top-[290px] left-0 hidden pl-2'>
             
@@ -128,7 +127,7 @@ const ShopPage = () => {
         <div className='w-[372px] relative pt-[280px]'>
           <Flex className="items-center justify-between">
           <Paragraph text="Shop by Brand" className="text-blue-600 ml-5 text-lg font-dm font-bold"/>
-          <FaCaretDown onClick={handleBrand}/>
+          <Link to="#"><FaCaretDown onClick={handleBrand}/></Link>
           </Flex>
           <div ref={brandRef} className='absolute  w-full top-[320px] ml-5 left-0 hidden pl-2'>
             <ul>
@@ -143,7 +142,7 @@ const ShopPage = () => {
         <div className='w-[372px] relative pt-[250px]'>
           <Flex className="items-center justify-between">
           <Paragraph text="Shop by Price" className="text-blue-600 ml-5 text-lg font-dm font-bold"/>
-          <FaCaretDown onClick={handlePrice}/>
+          <Link to="#"><FaCaretDown onClick={handlePrice}/></Link>
           </Flex>
           <div ref={priceRef} className='absolute  w-full top-[290px] left-0 hidden pl-2 ml-5'>
             <ul>
@@ -316,7 +315,7 @@ const ShopPage = () => {
         </div>
       </Flex>
     </Container>
-    <Footer />
+
     </>
   )
 }

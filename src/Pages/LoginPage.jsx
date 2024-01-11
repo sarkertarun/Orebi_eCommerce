@@ -1,8 +1,6 @@
-import Header from '../Components/Layouts/Header'
-import Category from '../Components/Layouts/Category'
+
 import Container from '../Components/Container'
 import Heading from '../Components/Heading'
-import Footer from '../Components/Layouts/Footer'
 import Label from '../Components/Label'
 import Input from '../Components/Input'
 import Button from '../Components/Button'
@@ -24,8 +22,7 @@ const LoginPage = () => {
    
   return (
     <>
-     <Header />
-    <Category />
+
     <Container>
         <Heading  text="Login" as="h3" className="text-5xl font-bold font-dm text-red-700 ml-5 pt-32"/>
         <Paragraph text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the." className="text-green-700 text-base font-dm font-normal ml-5 pt-[100px] pr-[630px] border-b border-yellow-300 pb-20"/>
@@ -54,7 +51,7 @@ const LoginPage = () => {
        
     </Container>
         
-        <Footer />
+
     </>
   )
 }
